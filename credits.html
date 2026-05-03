@@ -69,6 +69,12 @@ body {
   backdrop-filter: blur(10px);
   text-align: center;
   font-family: "MyBold", sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.dev:hover {
+  transform: scale(1.05);
 }
 
 .dev img {
@@ -154,19 +160,19 @@ body {
 
   <div class="dev-row">
 
-    <div class="dev">
+    <div class="dev" onclick="window.location.href='https://github.com/CooIer01/'">
       <img src="Cooler.png">
       <h2>Cooler01</h2>
       <p>Main developer & creator</p>
     </div>
 
-    <div class="dev">
+    <div class="dev" onclick="window.location.href='https://github.com/dysonperley419'">
       <img src="Wii.png">
       <h2>Nintendo Wii</h2>
       <p>Developer</p>
     </div>
 
-    <div class="dev">
+    <div class="dev" onclick="window.location.href='https://github.com/thatpicoder'">
       <img src="bitethe.png">
       <h2>bitetheapple</h2>
       <p>Website Dev & Graphic Designer</p>
