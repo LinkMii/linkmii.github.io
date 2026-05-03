@@ -11,7 +11,7 @@
 html, body {
   margin: 0;
   height: 100%;
-  overflow: hidden;
+  overflow-y: auto;
   color: white;
 }
 
@@ -24,14 +24,15 @@ body {
   background: linear-gradient(to bottom, #0f4c5c, #1b7f5c);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-100px);
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .logo {
@@ -129,10 +130,6 @@ body {
   .dev-row {
     flex-direction: column;
     align-items: center;
-  }
-
-  .wrapper {
-    transform: translateY(-60px);
   }
 }
 
