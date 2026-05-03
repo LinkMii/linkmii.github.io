@@ -118,7 +118,7 @@ body {
       <span>Credits</span>
     </div>
 
-    <div class="button">
+    <div class="button" onclick="goInstall()">
       <img src="button.png">
       <span>Install</span>
     </div>
@@ -132,6 +132,10 @@ document.getElementById("tagline").textContent = `Revive Your Wii In ${year}!`;
 
 function goCredits() {
   window.location.href = "credits.html";
+}
+
+function goInstall() {
+  window.location.href = "install.html";
 }
 </script>
 
