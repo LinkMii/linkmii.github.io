@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LinkMii - Credits</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="Tab.png">
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+@font-face {
+  font-family: "MyBold";
+  src: url("font(BOLD).otf");
+}
+
+body {
+  background: linear-gradient(to bottom, #0f4c5c, #1b7f5c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-100px);
+}
+
+.logo {
+  width: 350px;
+  max-width: 90vw;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+#title {
+  margin-top: 10px;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-family: "MyBold", sans-serif;
+  font-weight: normal;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.dev-row {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+}
+
+.dev {
+  width: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-family: "MyBold", sans-serif;
+}
+
+.dev img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.dev h2 {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  font-family: "MyBold", sans-serif;
+  font-weight: normal;
+}
+
+.dev p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.button {
+  margin-top: 30px;
+  position: relative;
+  cursor: pointer;
+  width: min(200px, 40vw);
+  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInNoTransform 2s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.button img {
+  width: 100%;
+  display: block;
+}
+
+.button span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "MyBold";
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: black;
+  text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+  .dev-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper {
+    transform: translateY(-60px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInNoTransform {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <img class="logo" src="logo.png">
+
+  <div id="title">Credits</div>
+
+  <div class="dev-row">
+
+    <div class="dev">
+      <img src="Cooler.png">
+      <h2>Cooler01</h2>
+      <p>Main developer & creator</p>
+    </div>
+
+    <div class="dev">
+      <img src="Wii.png">
+      <h2>Nintendo Wii</h2>
+      <p>Developer</p>
+    </div>
+
+    <div class="dev">
+      <img src="bitethe.png">
+      <h2>bitetheapple</h2>
+      <p>Website Dev & Graphic Designer</p>
+    </div>
+
+  </div>
+
+  <div class="button" onclick="goBack()">
+    <img src="button.png">
+    <span>Back</span>
+  </div>
+
+</div>
+
+<script>
+function goBack() {
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
